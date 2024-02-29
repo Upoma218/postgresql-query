@@ -41,10 +41,17 @@ VALUES
 
 
 SELECT * FROM students;
+
+SELECT country FROM students ORDER BY country ASC;
+
+SELECT DISTINCT country FROM students ORDER BY country ASC;
+
 SELECT email, age, blood_group FROM students;
+
 SELECT email as "Student Email" FROM students;
 
 SELECT * FROM students ORDER BY dob DESC;
+
 SELECT * FROM students ORDER BY first_name ASC;
 
 
@@ -63,31 +70,43 @@ SELECT DISTINCT blood_group from students;
 
 -- -- data filtering
 
--- -- Select students from the USA
--- -- Select students with 'A' grade in Physics
--- -- Select students with a specific blood group ('A+')
--- -- Select students from the USA or from Australia
--- -- Select students from the USA or from Australia and the age is 20
--- -- Select students with a grade of 'A' or 'B' in Math or Physics:
+Select students from the USA
+Select students with 'A' grade in Physics
+Select students with a specific blood group ('A+')
+Select students from the USA or from Australia
+Select students from the USA or from Australia and the age is 20
+Select students with a grade of 'A' or 'B' in Math or Physics:
 
--- -- Select students older than 20
-
-
--- SELECT * from students
---     WHERE (country = 'USA' OR country = 'Australia') and age = 20;
-
--- SELECT * from students
---     WHERE country <> 'USA' ;
-
--- SELECT * from students;
+Select students older than 20
 
 
--- SELECT length(first_name) from students;
+SELECT * from students
+    WHERE (country = 'USA' OR country = 'Australia') and age = 20;
+
+SELECT * from students
+    WHERE grade = 'A' and age = 20;
+
+SELECT * from students
+    WHERE country <> 'USA' ; 
+    -- <> means !=
+
+SELECT * from students
+    WHERE age > 20 and course = 'History';
+
+SELECT * from students
+    WHERE age <= 20;
+
+SELECT * from students;
+
+
+SELECT length(first_name) from students;
 
 
 
 
+SELECT upper(first_name) from students;
 
+SELECT concat(first_name, ' ', last_name) from students;
 
 
 
