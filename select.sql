@@ -90,6 +90,11 @@ SELECT * from students
     WHERE country <> 'USA' ; 
     -- <> means !=
 
+-- or 
+SELECT * from students
+    WHERE NOT country = 'USA' ; 
+    -- result will the same
+
 SELECT * from students
     WHERE age > 20 and course = 'History';
 
@@ -129,7 +134,21 @@ SELECT concat(first_name, ' ', last_name) from students;
 -- */
 
 
--- SELECT count(*) from students;
+SELECT count(*) from students;
+
+SELECT length(first_name) from students;
+
+SELECT avg(age) from students;
+
+SELECT max(age) from students;
+
+SELECT min(age) from students;
+
+SELECT sum(age) from students;
+
+SELECT count(*) from students;
+
+SELECT max(length(first_name)) from students;
 
 -- SELECT max(length(first_name)) from students;
 
@@ -139,8 +158,12 @@ SELECT concat(first_name, ' ', last_name) from students;
 
 --     -- SELECT NULL = 1;
 
--- SELECT * from students 
---     WHERE email IS NOT NULL;
+--  get all values where emails are null
+SELECT * from students 
+    WHERE email IS NULL;
+
+SELECT * from students 
+    WHERE email IS NOT NULL;
 
 -- SELECT * from students 
 
