@@ -42,8 +42,10 @@ VALUES
 
 SELECT * FROM students;
 SELECT email, age, blood_group FROM students;
+SELECT email as "Student Email" FROM students;
 
 SELECT * FROM students ORDER BY dob DESC;
+SELECT * FROM students ORDER BY first_name ASC;
 
 
 
