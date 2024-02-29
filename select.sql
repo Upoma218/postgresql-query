@@ -170,19 +170,42 @@ SELECT * from students
 select COALESCE(email, 'Email not provided') as "Email", blood_group, first_name from students;
 
 
--- -- SELECT * FROM students WHERE country = 'USA' or country = 'Canada' or country = 'UK' ;
--- SELECT * FROM students 
---     WHERE country IN('USA', 'UK', 'Canada') ;
--- SELECT * FROM students 
---     WHERE country NOT IN('USA', 'UK', 'Canada') ;
+SELECT * FROM students WHERE country = 'USA' or country = 'Canada' or country = 'UK' ;
 
--- SELECT * from students 
---     WHERE dob BETWEEN '2000-01-01' and '2005-01-01' ORDER BY dob;
+SELECT * FROM students 
+    WHERE country IN('USA', 'UK', 'Canada') ;
 
--- SELECT * from students
---     WHERE first_name LIKE '___a';
--- SELECT * from students
---     WHERE first_name ILIKE 'A%';
+SELECT * FROM students 
+    WHERE country NOT IN('USA', 'UK', 'Canada') ;
+
+SELECT * from students 
+    WHERE age BETWEEN 20 and 21;
+
+SELECT * from students 
+    WHERE dob BETWEEN '2000-01-01' and '2005-01-01' ORDER BY dob;
+
+-- start with
+SELECT * from students
+    WHERE first_name LIKE 'A%';
+
+-- end with
+SELECT * from students
+    WHERE first_name LIKE '%am';
+
+-- first 2 any, third a and others any
+SELECT * from students
+    WHERE first_name LIKE '__a%';
+-- first 3 any, third b and others any
+SELECT * from students
+    WHERE first_name LIKE '___b%';
+
+-- first 3 any, end with a
+SELECT * from students
+    WHERE first_name LIKE '___a';
+
+-- case insensitive
+SELECT * from students
+    WHERE first_name ILIKE 'A%';
  
 
 
