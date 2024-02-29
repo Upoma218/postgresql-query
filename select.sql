@@ -221,15 +221,21 @@ SELECT * from students LIMIT 5 OFFSET 5 * 1;
 SELECT * from students LIMIT 5 OFFSET 5 * 2;
 SELECT * from students LIMIT 5 OFFSET 5 * 3;
 
+-- DELETE FROM students
+
 
 -- SELECT * FROM students WHERE country = 'USA' ;
 
--- DELETE FROM students
---     WHERE grade = 'C' AND country = 'USA';
+DELETE FROM students
+    WHERE grade = 'C' AND country = 'USA';
 
 
--- SELECT * FROM students;
+SELECT * FROM students;
 
--- UPDATE students
---     set email = 'default@mail.com', age = 30, course = 'sfdf'
---    id = 45;
+UPDATE students
+    set email = 'default@gmail.com'
+    WHERE student_id = 19;
+
+UPDATE students
+    set email = 'default@mail.com', age = 30, course = 'sfdf'
+    WHERE student_id = 19;;
