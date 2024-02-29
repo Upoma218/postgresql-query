@@ -165,9 +165,9 @@ SELECT * from students
 SELECT * from students 
     WHERE email IS NOT NULL;
 
--- SELECT * from students 
+SELECT * from students 
 
--- select COALESCE(email, 'Email not provided') as "Email", blood_group, first_name from students;
+select COALESCE(email, 'Email not provided') as "Email", blood_group, first_name from students;
 
 
 -- -- SELECT * FROM students WHERE country = 'USA' or country = 'Canada' or country = 'UK' ;
