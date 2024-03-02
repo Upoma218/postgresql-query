@@ -1,4 +1,4 @@
--- Active: 1699467625194@@127.0.0.1@5432@ph@public
+-- Active: 1709224115030@@127.0.0.1@5432@ph
 CREATE Table "user"(
     id SERIAL PRIMARY KEY,
     username VARCHAR(25) NOT NULL
@@ -7,7 +7,8 @@ CREATE Table "user"(
 CREATE Table post(
     id SERIAL PRIMARY KEY,
     title text NOT NULL,
-    user_id INTEGER REFERENCES "user"(id) on delete set DEFAULT DEFAULT 2 
+    user_id INTEGER REFERENCES "user"(id)
+    -- user_id INTEGER REFERENCES "user"(id) on delete set DEFAULT DEFAULT 2 
 )
 
 
