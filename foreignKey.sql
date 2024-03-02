@@ -7,8 +7,10 @@ CREATE Table "user"(
 CREATE Table post(
     id SERIAL PRIMARY KEY,
     title text NOT NULL,
-    user_id INTEGER REFERENCES "user"(id)
-    -- user_id INTEGER REFERENCES "user"(id) on delete set DEFAULT DEFAULT 2 
+    -- user_id INTEGER REFERENCES "user"(id)
+    -- user_id INTEGER REFERENCES "user"(id) on delete set on CASCADE 
+    user_id INTEGER REFERENCES "user"(id) on delete set DEFAULT  DEFAULT 2 
+    -- user_id INTEGER REFERENCES "user"(id) on delete set NULL 
 )
 
 
