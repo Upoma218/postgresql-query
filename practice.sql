@@ -1,4 +1,4 @@
--- Active: 1699467625194@@127.0.0.1@5432@ph@public
+-- Active: 1709224115030@@127.0.0.1@5432@ph
 CREATE TABLE employees (
     employee_id SERIAL PRIMARY KEY,
     employee_name VARCHAR(50),
@@ -13,6 +13,7 @@ CREATE TABLE departments (
     department_name VARCHAR(50)
 );
 
+drop Table employees;
 drop Table departments;
 
 INSERT INTO departments (department_name) VALUES 
@@ -67,16 +68,18 @@ JOIN departments ON employees.department_id = departments.department_id;
 SELECT * from employees
 JOIN departments USING(department_id);
 
+-- find avarage salary of all department with the department name
+
 SELECT department_name, round(avg(salary)) as avg_salary  FROM employees
 JOIN departments USING(department_id)
 GROUP BY department_name;
 
-
+-- count empolyee in each department
 SELECT department_name, count(employee_id) FROM employees
 JOIN departments USING(department_id)
 GROUP BY department_name;
 
-
+-- find the department name with the highest avarage salary
 SELECT department_name, round(avg(salary)) as avg_salary FROM employees
 JOIN departments USING(department_id)
 GROUP BY department_name
@@ -84,6 +87,7 @@ ORDER BY avg_salary desc
 LIMIT 1
 ;
 
+-- count employees hired each year
 SELECT extract(YEAR from hire_date) as hire_year, count(*) from employees
 GROUP BY hire_year;
 
