@@ -1,4 +1,4 @@
--- Active: 1699467625194@@127.0.0.1@5432@ph@public
+-- Active: 1709224115030@@127.0.0.1@5432@ph
 
 CREATE Table "user"(
     id SERIAL PRIMARY KEY,
@@ -30,11 +30,19 @@ DROP Table post;
 DROP Table "user";
 
 SELECT * from "user";
+
 SELECT * from post;
+
 
 SELECT * FROM post as p
 JOIN "user" u on p.user_id = u.id;
 
+
+SELECT title, username from post
+JOIN "user" on post.user_id = "user".id;
+
+SELECT * from post as p
+JOIN "user" as u on p.user_id = u.id;
 
 
 INSERT INTO post (id, title, user_id) VALUES
