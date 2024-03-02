@@ -1,3 +1,4 @@
+-- Active: 1709224115030@@127.0.0.1@5432@ph
 CREATE TABLE employees (
     emp_id INT,
     emp_name VARCHAR(50),

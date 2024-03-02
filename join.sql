@@ -50,7 +50,7 @@ INSERT INTO post (id, title, user_id) VALUES
 
 
 SELECT * FROM post as p
-LEFt OUTER JOIN "user" u on p.user_id = u.id;
+LEFT OUTER JOIN "user" u on p.user_id = u.id;
 
 
 SELECT * FROM post as p
