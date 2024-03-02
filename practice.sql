@@ -103,6 +103,8 @@ CREATE TABLE orders (
     total_amount DECIMAL(10, 2)
 );
 
+
+
 INSERT INTO orders (customer_id, order_date, total_amount) VALUES 
     (1, '2022-01-05', 100.50),
     (2, '2020-01-07', 200.75),
@@ -117,6 +119,7 @@ INSERT INTO orders (customer_id, order_date, total_amount) VALUES
     (4, '2023-02-05', 190.25);
 
 DROP Table orders;
+SELECT * from orders;
 
     -- Find customers who have placed more than 2 orders and calculate the total amount spent by each of these customers.
 
