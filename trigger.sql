@@ -1,4 +1,4 @@
--- Active: 1699467625194@@127.0.0.1@5432@ph@public
+-- Active: 1709224115030@@127.0.0.1@5432@ph
 
 /*
 A trigger is a database object in PostgreSQL (and other database management systems) that automatically executes a specified set of actions in response to certain database events or conditions. 
@@ -55,4 +55,4 @@ on my_users
 FOR EACH ROW
 EXECUTE FUNCTION save_deleted_user();
 
-DELETE from my_users WHERE user_name = 'Mir';
+DELETE from my_users WHERE user_name = 'Mezba';
