@@ -49,6 +49,7 @@ $$;
 
 SELECT delete_emp_by_id(29)
 
+-- procedure
 CREATE Procedure remove_emp_var()
 LANGUAGE plpgsql
 AS
@@ -62,6 +63,7 @@ $$
 $$;
 
 call remove_emp_var();
+
 
 CREATE Procedure remove_emp_by_id(p_emp_id int)
 LANGUAGE plpgsql
@@ -78,7 +80,7 @@ $$
 $$;
 
 
-CALL remove_emp_by_id(25)
+CALL remove_emp_by_id(24)
 
 
 
