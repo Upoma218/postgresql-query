@@ -1,4 +1,4 @@
--- Active: 1699467625194@@127.0.0.1@5432@ph@public
+-- Active: 1709224115030@@127.0.0.1@5432@ph
 
 
 CREATE TABLE employees (
@@ -57,6 +57,8 @@ SELECT * from employees WHERE salary > (SELECT max(salary) from employees WHERE 
 -- Can return a single value
 -- Can return multiple rows
 -- Can return a single column
+
+
 
 SELECT employee_name, salary, department_name 
 FROM employees 
